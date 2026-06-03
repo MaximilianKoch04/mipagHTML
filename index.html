@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad Integrada - El Litoral y Cuestionario</title>
+    <link rel="icon" href="C:\Users\Navegador\Desktop\PAGINA\favicon.png">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <article class="noticia-contenedor">
+        <header class="barra">
+            <h1 class="logo-clarin">Clarin</h1>
+            <button class="prueba">Suscribirse/$20</button>
+        </header>
+
+        <header class="entrada-header">
+            <nav></nav>
+            <h1>Manuel Adorni responde en Diputados tras su informe anual</h1>
+            <p class="bajada">El jefe de Gabinete llega al Congreso en medio de las investigaciones judiciales y con un plan de contraataque a la oposición.</p>
+            
+            <figure class="imagen-destacada">
+                <img src="https://tn.com.ar/resizer/v2/manuel-adorni-en-el-congreso-fuente-ap-photonatacha-pisarenko-DW4G4OWOEBCKJMD47D72RFU2FY.jpg?auth=3b946a974802bfd1aab484462c6e0ee163d5c9fb3f90c144c7e6fee7c7eda874&width=767" alt="Manuel Adorni en la Cámara de Diputados">
+                <figcaption>
+                    Manuel Adorni, jefe de Gabinete, durante su presentación este miércoles.
+                </figcaption>
+            </figure>
+
+            <address>Por Redacción El Litoral</address>
+            <time datetime="2026-04-29">Miércoles 29 de abril de 2026</time>
+        </header>
+
+        <section class="cuerpo-noticia">
+            <p>El jefe de Gabinete, Manuel Adorni, se presentó ante la Cámara de Diputados para brindar explicaciones sobre la gestión de gobierno y responder a las consultas de los distintos bloques legislativos.</p>
+            <p>Durante su informe, se abordaron temas clave como la situación económica, las investigaciones patrimoniales y el proyecto de "Ficha Limpia" impulsado por sectores de la provincia de Santa Fe.</p>
+        </section>
+        
+        <div class="imagen-secundaria">
+            <img src="https://ingeoexpert.com/wp-content/uploads/2023/10/architecture-house-town-palace-city-cityscape-914385-pxhere.com_.webp" alt="casa rosada">
+        </div>
+    </article>
+
+    <hr> 
+    
+    <header class="cuestionario-header">
+        <h2>CUESTIONARIO CLASE 3</h2>
+    </header>
+
+    <form class="formulario-consulta" action="#" method="post">
+        <fieldset>
+            <legend>Ingresa tus datos principales</legend>
+            <div class="input-group">
+                <label for="nombre">Tu Nombre:</label>
+                <input type="text" id="nombre" name="nombre" pattern="[A-Za-z\s]+" title="Solo letras" required>
+            </div>
+            <div class="input-group">
+                <label for="apellido">Tu Apellido:</label>
+                <input type="text" id="apellido" name="apellido" pattern="[A-Za-z\s]+" title="Solo letras" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+        </fieldset>
+
+        <fieldset class="fieldset-info">
+            <legend>Información sobre Rosario y Carrera</legend>
+
+            <div class="bloque-pregunta">
+                <h4>¿En qué zona de Rosario vivís?</h4>
+                <fieldset class="opciones-radio">
+                    <label><input type="radio" name="zona_rosario" value="centro"> Zona Centro</label>
+                    <label><input type="radio" name="zona_rosario" value="oeste"> Zona Oeste</label>
+                    <label><input type="radio" name="zona_rosario" value="norte"> Zona Norte</label>
+                    <label><input type="radio" name="zona_rosario" value="sur"> Zona Sur</label>
+                </fieldset>
+            </div>
+
+            <div class="bloque-pregunta">
+                <h4>¿Cuántos años te quedan para recibirte?</h4>
+                <fieldset class="opciones-radio">
+                    <label><input type="radio" name="tiempo_carrera" value="menos_1"> menos de 1 año</label>
+                    <label><input type="radio" name="tiempo_carrera" value="1"> 1 año</label>
+                    <label><input type="radio" name="tiempo_carrera" value="2_o_mas"> 2 años o más</label>
+                    <label><input type="radio" name="tiempo_carrera" value="inicio"> recién empiezo</label>
+                </fieldset>
+            </div>
+
+            <div class="bloque-pregunta">
+                <h4>¿Qué pensás hacer al recibirte?</h4>
+                <fieldset class="opciones-radio">
+                    <label><input type="radio" name="objetivo_profesional" value="freelance"> Mandarme de freelancer</label>
+                    <label><input type="radio" name="objetivo_profesional" value="empresa"> Trabajar en una empresa</label>
+                    <label><input type="radio" name="objetivo_profesional" value="posgrado"> Meter Posgrado</label>
+                    <label><input type="radio" name="objetivo_profesional" value="emprender"> Formar una empresa</label>
+                </fieldset>
+            </div>
+        </fieldset>
+
+        <div class="satisfaccion-container">
+            <label for="satisfaccion">Satisfacción del cuestionario:</label>
+            <input type="range" id="satisfaccion" name="satisfaccion" min="0" max="100">
+        </div>
+        
+        <button class="btn-enviar" type="submit">Entregar</button>
+    </form>
+
+</body>
+</html>

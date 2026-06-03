@@ -1,0 +1,123 @@
+/* ==========================================================================
+   1. ESTILOS BASE (Pensados para MOBILE por defecto)
+   ========================================================================== */
+
+/* Regla vital para que las imágenes nunca se desborden en el celular */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 15px auto; /* Las centra automáticamente */
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.barra {
+  display: flex;
+  flex-direction: column; /* En mobile, el logo y el botón van uno abajo del otro */
+  gap: 10px;              /* Espacio entre el logo y el botón */
+  align-items: center;
+  padding: 15px 20px;
+  background-color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  color: red;
+  margin: 0;
+}
+
+/* En mobile el botón fluye normal dentro de la barra para no tapar nada */
+.prueba {
+  background-color: rgb(255, 223, 43);
+  color: black;
+  padding: 10px 20px;   /* Un poco más chico en mobile */
+  font-size: 16px;      
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  width: 100%;          /* Ocupa todo el ancho disponible en celulares */
+  text-align: center;
+}
+
+.prueba:hover {
+  background-color: rgb(110, 250, 168);
+}
+
+/* Estilos extra para que el formulario se vea ordenado en celular */
+body {
+  font-family: Arial, sans-serif;
+  padding: 10px;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+form {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+}
+
+input[type="text"], input[type="email"] {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px;
+  margin-top: 5px;
+}
+
+
+/* ==========================================================================
+   2. MEDIA QUERY PARA TABLETS (Pantallas desde 768px en adelante)
+   ========================================================================== */
+@media screen and (min-width: 768px) {
+  body {
+    padding: 30px;
+  }
+
+  /* El contenido ya no se pega a los bordes de la pantalla */
+  article, form {
+    max-width: 90%;
+    margin: 0 auto 20px auto;
+  }
+
+  /* En tablet, la barra vuelve a poner los elementos alineados horizontalmente */
+  .barra {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .prueba {
+    width: auto; /* El botón recupera su tamaño normal basado en su texto */
+    font-size: 18px;
+    padding: 12px 22px;
+  }
+}
+
+
+/* ==========================================================================
+   3. MEDIA QUERY PARA DESKTOP (Pantallas desde 1024px en adelante)
+   ========================================================================== */
+@media screen and (min-width: 1024px) {
+  article, form {
+    max-width: 850px; /* Ancho máximo ideal para lectura en monitores */
+  }
+
+  /* Acá activamos tu idea original de dejar el botón estático arriba a la derecha */
+  .prueba {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    padding: 15px 25px;
+    z-index: 1000; /* Asegura que quede por encima de todo al hacer scroll */
+  }
+  
+  /* Hacemos que los sub-fieldset (las preguntas del cuestionario) se muestren en fila */
+  fieldset fieldset {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+}
